@@ -1,4 +1,4 @@
-package com.autonavi.lbi.mr;
+package com.lbi.lbi.mr;
 
 import com.aliyun.odps.io.TableInfo;
 import com.aliyun.odps.io.TableInputFormat;
@@ -6,10 +6,10 @@ import com.aliyun.odps.io.TableOutputFormat;
 import com.aliyun.odps.io.Text;
 import com.aliyun.odps.mapreduce.JobClient;
 import com.aliyun.odps.mapreduce.JobConf;
-//import com.autonavi.lbi.ClusterImeiCombiner;
-import com.autonavi.lbi.ClusterImeiMapperClass;
-import com.autonavi.lbi.ClusterImeiReducerClass;
-import com.autonavi.util.TimeUtil;
+//import com.lbi.lbi.ClusterImeiCombiner;
+import com.lbi.lbi.ClusterImeiMapperClass;
+import com.lbi.lbi.ClusterImeiReducerClass;
+import com.lbi.util.TimeUtil;
 
 public class Cluster_Imei {
 	
@@ -28,11 +28,11 @@ public class Cluster_Imei {
 		    job.setMapOutputValueClass(Text.class);
 //		    job.setNumReduceTasks(100);
 		    String inDate = args[3];
-		    boolean hasData = TableJudgment.judgeDateCount(inDate,args[0],"autonavi_ods");
+		    boolean hasData = TableJudgment.judgeDateCount(inDate,args[0],"lbi_ods");
 			while(!hasData)
 			{
 				 inDate = TimeUtil.getPreDayTimeStamp(inDate, 7);
-				 hasData = TableJudgment.judgeDateCount(inDate,args[0],"autonavi_ods");
+				 hasData = TableJudgment.judgeDateCount(inDate,args[0],"lbi_ods");
 				 System.out.println("业务日期数据无,取前一天试一下!");
 			}
 		    TableInputFormat.addInput(new TableInfo(args[0],"ds=" + args[3]), job);  //location

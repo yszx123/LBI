@@ -1,4 +1,4 @@
-package com.autonavi.lbi;
+package com.lbi.lbi;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedReader;
@@ -12,9 +12,9 @@ import com.aliyun.odps.io.LongWritable;
 import com.aliyun.odps.io.Text;
 import com.aliyun.odps.mapreduce.MapContext;
 import com.aliyun.odps.mapreduce.Mapper;
-import com.autonavi.map.LngLat;
-import com.autonavi.map.Point;
-import com.autonavi.map.TMap;
+import com.lbi.map.LngLat;
+import com.lbi.map.Point;
+import com.lbi.map.TMap;
 
 public class ImeiMapperClass extends Mapper<Text, Text>{
 	private Text grid = new Text();

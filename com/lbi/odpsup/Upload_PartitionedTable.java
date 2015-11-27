@@ -1,4 +1,4 @@
-package com.autonavi.odpsup;
+package com.lbi.odpsup;
 
 import java.io.IOException;
 
@@ -15,7 +15,7 @@ import com.alibaba.odps.tunnel.Upload;
 import com.alibaba.odps.tunnel.Upload.Status;
 import com.alibaba.odps.tunnel.io.Record;
 import com.alibaba.odps.tunnel.io.RecordWriter;
-import com.autonavi.odpsup.shp.ShpReader;
+import com.lbi.odpsup.shp.ShpReader;
 
 public class Upload_PartitionedTable {
 	private static String endpoint = "http://dt.odps.aliyun.com";//"http://dt.odps.aliyun.com";
@@ -23,7 +23,7 @@ public class Upload_PartitionedTable {
 	private static String accessKey = "zqeHhP3vyqTwczdVdzFulfMH6TZ9Nl";
 
 	private static String project = "mapabc_lbi";
-	private static String table = "s_autonavi_road_info";
+	private static String table = "s_lbi_road_info";
 	private static String partition = "ds=20140415";//"ds=20140110";
 
 	static ShpReader reader = new ShpReader();

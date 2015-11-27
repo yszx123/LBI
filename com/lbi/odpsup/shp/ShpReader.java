@@ -1,4 +1,4 @@
-package com.autonavi.odpsup.shp;
+package com.lbi.odpsup.shp;
 
 import java.io.File;
 import java.nio.charset.Charset;

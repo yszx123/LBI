@@ -1,4 +1,4 @@
-package com.autonavi.odpsup;
+package com.lbi.odpsup;
 
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -47,8 +47,8 @@ public class DownTable {
 	private static String accessId = "2w1mbUbPwhgbqLnu";
 	private static String accessKey = "zpW6QAd30aDJYBuIeu1XrcCyoxllhE";
 
-	private static String project = "autonavi";
-	private static String table = "s_autonavi_location_log_cluster";
+	private static String project = "lbi";
+	private static String table = "s_lbi_location_log_cluster";
 	private static String partition = "ds=";//"ds=20140110";
 	
 	public static void main(String args[]) {

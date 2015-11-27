@@ -1,4 +1,4 @@
-package com.autonavi.lbi;
+package com.lbi.lbi;
 
 import java.io.IOException;
 import java.util.HashSet;
@@ -10,7 +10,7 @@ import com.aliyun.odps.io.IntWritable;
 import com.aliyun.odps.io.Text;
 import com.aliyun.odps.mapreduce.ReduceContext;
 import com.aliyun.odps.mapreduce.Reducer;
-import com.autonavi.util.StringUtil;
+import com.lbi.util.StringUtil;
 
 public class ReducerClass  extends Reducer<Text, Text> {
 	private String keySeperator = "@";

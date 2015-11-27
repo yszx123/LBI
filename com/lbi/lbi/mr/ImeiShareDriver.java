@@ -1,4 +1,4 @@
-package com.autonavi.lbi.mr;
+package com.lbi.lbi.mr;
 
 import java.io.IOException;
 
@@ -8,8 +8,8 @@ import com.aliyun.odps.io.TableOutputFormat;
 import com.aliyun.odps.io.Text;
 import com.aliyun.odps.mapreduce.JobClient;
 import com.aliyun.odps.mapreduce.JobConf;
-import com.autonavi.lbi.ImeiShareMapper;
-import com.autonavi.lbi.ImeiShareReducer;
+import com.lbi.lbi.ImeiShareMapper;
+import com.lbi.lbi.ImeiShareReducer;
 //@author bailu
 public class ImeiShareDriver {
 

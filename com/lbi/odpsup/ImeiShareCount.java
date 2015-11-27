@@ -1,4 +1,4 @@
-package com.autonavi.odpsup;
+package com.lbi.odpsup;
 
 import java.io.IOException;
 import java.text.DateFormat;
@@ -21,7 +21,7 @@ public class ImeiShareCount {
 	private static String accessId = "2w1mbUbPwhgbqLnu";
 	private static String accessKey = "zpW6QAd30aDJYBuIeu1XrcCyoxllhE";
 
-	private static String project = "autonavi";
+	private static String project = "lbi";
 	private static String table = "lbi_bl_imei_accesstime_lat_lon";
 	private static String partition = "20140401";
 	

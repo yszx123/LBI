@@ -1,4 +1,4 @@
-package com.autonavi.lbi;
+package com.lbi.lbi;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -9,10 +9,10 @@ import com.aliyun.odps.io.LongWritable;
 import com.aliyun.odps.io.Text;
 import com.aliyun.odps.mapreduce.MapContext;
 import com.aliyun.odps.mapreduce.Mapper;
-import com.autonavi.map.LngLat;
-import com.autonavi.map.TMap;
-import com.autonavi.spatial.EsriAlgorithmsUtil;
-import com.autonavi.spatial.GeomAlgorithmUtil;
+import com.lbi.map.LngLat;
+import com.lbi.map.TMap;
+import com.lbi.spatial.EsriAlgorithmsUtil;
+import com.lbi.spatial.GeomAlgorithmUtil;
 import com.esri.core.geometry.Point;
 
 public class RoadFlowCountMapperClass extends Mapper<Text, Text> {
@@ -37,7 +37,7 @@ public class RoadFlowCountMapperClass extends Mapper<Text, Text> {
 		String name = record.get("accesstime").toString().split(" ")[1].substring(0, 2);
 		String[] poi_desc = record.get("poi_desc").toString().split(" ");
 		String is_rota = record.get("is_rota").toString();
-		com.autonavi.map.Point pt = TMap.lonLat2Mercator(new LngLat(lon,lat));
+		com.lbi.map.Point pt = TMap.lonLat2Mercator(new LngLat(lon,lat));
 		if (poi_desc.length > 1 && lon >= -180 && lon < 180 && lat >= -90 && lat < 90 && is_rota.equalsIgnoreCase("0")) {
 			String ad = poi_desc[0] + keySeperator + poi_desc[1];
 			ad = (poi_desc[0].indexOf("市") != -1|| poi_desc[0].indexOf("特别行政") != -1 ? poi_desc[0] : ad);

@@ -1,9 +1,9 @@
-package com.autonavi.odps.udf;
+package com.lbi.odps.udf;
 
 import com.aliyun.odps.udf.UDF;
-import com.autonavi.map.LngLat;
-import com.autonavi.map.Point;
-import com.autonavi.map.TMap;
+import com.lbi.map.LngLat;
+import com.lbi.map.Point;
+import com.lbi.map.TMap;
 
 public class GridLngLatOperator extends UDF{
 	

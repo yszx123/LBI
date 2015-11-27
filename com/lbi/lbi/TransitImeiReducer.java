@@ -1,4 +1,4 @@
-package com.autonavi.lbi;
+package com.lbi.lbi;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -10,9 +10,9 @@ import com.aliyun.odps.io.DoubleWritable;
 import com.aliyun.odps.io.Text;
 import com.aliyun.odps.mapreduce.ReduceContext;
 import com.aliyun.odps.mapreduce.Reducer;
-import com.autonavi.lbi.model.Imei;
-import com.autonavi.lbi.model.Transit;
-import com.autonavi.tmap.cloud.common.utils.TextUtil;
+import com.lbi.lbi.model.Imei;
+import com.lbi.lbi.model.Transit;
+import com.lbi.tmap.cloud.common.utils.TextUtil;
 
 public class TransitImeiReducer extends Reducer<Text, Text> {
 	private HashMap<String, Record> resultMap = new HashMap<String, Record>();

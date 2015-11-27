@@ -1,4 +1,4 @@
-package com.autonavi.odpsup;
+package com.lbi.odpsup;
 
 
 import java.io.BufferedReader;
@@ -16,7 +16,7 @@ import com.alibaba.odps.tunnel.Upload.Status;
 import com.alibaba.odps.tunnel.io.Record;
 import com.alibaba.odps.tunnel.io.RecordWriter;
 
-import com.autonavi.util.PropertiesUtil;
+import com.lbi.util.PropertiesUtil;
 //@author bailu
 public class UploadFile_Road {
 
@@ -24,7 +24,7 @@ public class UploadFile_Road {
 	private static String accessId = "2w1mbUbPwhgbqLnu";
 	private static String accessKey = "zpW6QAd30aDJYBuIeu1XrcCyoxllhE";
 
-	private static String project = "autonavi";
+	private static String project = "lbi";
 	private static String table = "road";
 	private static String partition = "ds=20140417";// "ds=20140417";
 

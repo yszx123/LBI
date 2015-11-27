@@ -1,4 +1,4 @@
-package com.autonavi.chun;
+package com.lbi.chun;
 
 
 import java.io.File;
@@ -13,8 +13,8 @@ public class Bootstrap {
 	private static String accessId = "2w1mbUbPwhgbqLnu";
 	private static String accessKey = "zpW6QAd30aDJYBuIeu1XrcCyoxllhE";
 
-	private static String project = "autonavi";
-	private static String table ="s_autonavi_address_location_log_utf_8";//s_autonavi_address_location_log_mul
+	private static String project = "lbi";
+	private static String table ="s_lbi_address_location_log_utf_8";//s_lbi_address_location_log_mul
 	private static String partition = "ds=";
 
 	public static final AtomicBoolean running = new AtomicBoolean(false);

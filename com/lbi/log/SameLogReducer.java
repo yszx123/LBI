@@ -1,4 +1,4 @@
-package com.autonavi.log;
+package com.lbi.log;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -7,7 +7,7 @@ import com.aliyun.odps.Record;
 import com.aliyun.odps.io.Text;
 import com.aliyun.odps.mapreduce.ReduceContext;
 import com.aliyun.odps.mapreduce.Reducer;
-import com.autonavi.odps.udf.LngLatOperator;
+import com.lbi.odps.udf.LngLatOperator;
 
 public class SameLogReducer extends Reducer<Text, Text>{
 	private Record result = null;

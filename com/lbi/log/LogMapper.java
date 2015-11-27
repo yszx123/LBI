@@ -1,4 +1,4 @@
-package com.autonavi.log;
+package com.lbi.log;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedReader;
@@ -12,7 +12,7 @@ import com.aliyun.odps.io.LongWritable;
 import com.aliyun.odps.io.Text;
 import com.aliyun.odps.mapreduce.MapContext;
 import com.aliyun.odps.mapreduce.Mapper;
-import com.autonavi.aps.util.GpsOffset;
+import com.lbi.aps.util.GpsOffset;
 
 public class LogMapper extends Mapper<Text, Text> {
 	private Text word = new Text();

@@ -1,4 +1,4 @@
-package com.autonavi.lbi;
+package com.lbi.lbi;
 
 import java.io.IOException;
 import java.util.HashMap;
@@ -11,9 +11,9 @@ import com.aliyun.odps.io.LongWritable;
 import com.aliyun.odps.io.Text;
 import com.aliyun.odps.mapreduce.MapContext;
 import com.aliyun.odps.mapreduce.Mapper;
-import com.autonavi.lbi.model.Transit;
-import com.autonavi.map.LngLat;
-import com.autonavi.map.TMap;
+import com.lbi.lbi.model.Transit;
+import com.lbi.map.LngLat;
+import com.lbi.map.TMap;
 
 /**
  * 灏唕ecord 缁忕含搴︾偣鍒嗛厤鍒板悎鐞嗙殑鑱氱被鍖洪棿 Record(x,y,...)
@@ -46,7 +46,7 @@ public class TransitImeiMapper extends Mapper<Text, Text> {
 			double lat = Double.parseDouble(record.get("lat").toString());
 			String accesstime = record.get("accesstime").toString();
 			String imei = record.get("imei").toString();
-			com.autonavi.map.Point pt = TMap.lonLat2Mercator(new LngLat(lon,
+			com.lbi.map.Point pt = TMap.lonLat2Mercator(new LngLat(lon,
 					lat));
 			int gx = (int) Math.ceil(pt.X / GIDSIZE);
 			int gy = (int) Math.ceil(pt.Y / GIDSIZE);

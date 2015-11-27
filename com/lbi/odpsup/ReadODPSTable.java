@@ -1,4 +1,4 @@
-package com.autonavi.odpsup;
+package com.lbi.odpsup;
 
 import java.io.IOException;
 import java.util.Date;
@@ -18,7 +18,7 @@ public class ReadODPSTable {
 	private static String accessId = "2w1mbUbPwhgbqLnu";
 	private static String accessKey = "zpW6QAd30aDJYBuIeu1XrcCyoxllhE";
 
-	private static String project = "autonavi";
+	private static String project = "lbi";
 	private static String table = "collect_result_data";
 	private static String partition = "";
 	

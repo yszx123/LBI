@@ -1,4 +1,4 @@
-package com.autonavi.lbi.mr;
+package com.lbi.lbi.mr;
 
 import com.aliyun.odps.io.TableInfo;
 import com.aliyun.odps.io.TableInputFormat;
@@ -6,18 +6,18 @@ import com.aliyun.odps.io.TableOutputFormat;
 import com.aliyun.odps.io.Text;
 import com.aliyun.odps.mapreduce.JobClient;
 import com.aliyun.odps.mapreduce.JobConf;
-import com.autonavi.lbi.ImeiMapperClass;
-import com.autonavi.lbi.ImeiReducerClass;
-import com.autonavi.util.TimeUtil;
+import com.lbi.lbi.ImeiMapperClass;
+import com.lbi.lbi.ImeiReducerClass;
+import com.lbi.util.TimeUtil;
 
 /**
  * for DMP use
  * imei的gid 商圈id关联列表
- * input table s_autonavi_address_location_log 
+ * input table s_lbi_address_location_log 
  * resource: business_region_info(biz_id,geom),black_imei 
  * output table s_autoanvi_imei_gid 
  * run:
- * jar -libjars json.jar,esri-geometry-api.jar,odps_cluster_qj.jar,autonavi-map-1.0.jar,esri_tool.jar,jts-1.13.jar,spatial-sdk-hadoop.jar -classpath autonavi/odps_cluster_qj.jar com.autonavi.lbi.mr.TransitDriver transit_line_info_d transit_station_info_d transit_gidindex; 
+ * jar -libjars json.jar,esri-geometry-api.jar,odps_cluster_qj.jar,lbi-map-1.0.jar,esri_tool.jar,jts-1.13.jar,spatial-sdk-hadoop.jar -classpath lbi/odps_cluster_qj.jar com.lbi.lbi.mr.TransitDriver transit_line_info_d transit_station_info_d transit_gidindex; 
  * @author shuaimin.yang 
  */
 public class ImeiDriver {

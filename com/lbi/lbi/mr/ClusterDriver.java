@@ -1,4 +1,4 @@
-package com.autonavi.lbi.mr;
+package com.lbi.lbi.mr;
 
 import com.aliyun.odps.io.TableInfo;
 import com.aliyun.odps.io.TableInputFormat;
@@ -6,16 +6,16 @@ import com.aliyun.odps.io.TableOutputFormat;
 import com.aliyun.odps.io.Text;
 import com.aliyun.odps.mapreduce.JobClient;
 import com.aliyun.odps.mapreduce.JobConf;
-import com.autonavi.lbi.ClusterMapperClass;
-import com.autonavi.lbi.ClusterReducerClass;
-import com.autonavi.util.TimeUtil;
+import com.lbi.lbi.ClusterMapperClass;
+import com.lbi.lbi.ClusterReducerClass;
+import com.lbi.util.TimeUtil;
 
 /**
  * 通过定位日志聚类形成人流量密集面及其索引表
- * input table s_autonavi_address_location_log_utf_8
- * output table s_autonavi_location_log_gidindex s_autonavi_location_log_cluster
+ * input table s_lbi_address_location_log_utf_8
+ * output table s_lbi_location_log_gidindex s_lbi_location_log_cluster
  * run:
- * jar -libjars json.jar,esri-geometry-api.jar,odps_cluster_qj.jar,autonavi-map-1.0.jar,esri_tool.jar,jts-1.13.jar,spatial-sdk-hadoop.jar -resources wkt.txt -classpath autonavi/odps_cluster_qj.jar com.autonavi.lbi.mr.ClusterDriver s_autonavi_address_location_log_utf_8 s_autonavi_location_log_gidindex s_autonavi_location_log_cluster 25 20140116 20140116; 
+ * jar -libjars json.jar,esri-geometry-api.jar,odps_cluster_qj.jar,lbi-map-1.0.jar,esri_tool.jar,jts-1.13.jar,spatial-sdk-hadoop.jar -resources wkt.txt -classpath lbi/odps_cluster_qj.jar com.lbi.lbi.mr.ClusterDriver s_lbi_address_location_log_utf_8 s_lbi_location_log_gidindex s_lbi_location_log_cluster 25 20140116 20140116; 
  * @author shuaimin.yang *
  */
 public class ClusterDriver {
@@ -37,11 +37,11 @@ public class ClusterDriver {
 		    job.setMapOutputValueClass(Text.class);
 		    job.setNumReduceTasks(500);
 		    String inDate = args[4];
-		    boolean hasData = TableJudgment.judgeDateCount(inDate,args[0],"autonavi_ods");
+		    boolean hasData = TableJudgment.judgeDateCount(inDate,args[0],"lbi_ods");
 			while(!hasData)
 			{
 				 inDate = TimeUtil.getPreDayTimeStamp(inDate, 7);
-				 hasData = TableJudgment.judgeDateCount(inDate,args[0],"autonavi_ods");
+				 hasData = TableJudgment.judgeDateCount(inDate,args[0],"lbi_ods");
 				 System.out.println("业务日期数据无,取前一天试一下!");
 			}
 		    TableInputFormat.addInput(new TableInfo(args[0],"ds=" + inDate), job);  //location

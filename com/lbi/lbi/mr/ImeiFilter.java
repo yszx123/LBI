@@ -1,4 +1,4 @@
-package com.autonavi.lbi.mr;
+package com.lbi.lbi.mr;
 
 import java.io.IOException;
 
@@ -8,8 +8,8 @@ import com.aliyun.odps.io.TableOutputFormat;
 import com.aliyun.odps.io.Text;
 import com.aliyun.odps.mapreduce.JobClient;
 import com.aliyun.odps.mapreduce.JobConf;
-import com.autonavi.lbi.ImeiShareMapperFilter;
-import com.autonavi.lbi.ImeiShareReducerFilter;
+import com.lbi.lbi.ImeiShareMapperFilter;
+import com.lbi.lbi.ImeiShareReducerFilter;
 //@author bailu
 public class ImeiFilter {
 	/**

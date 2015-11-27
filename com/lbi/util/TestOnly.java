@@ -1,10 +1,10 @@
-package com.autonavi.util;
+package com.lbi.util;
 
 import java.io.IOException;
 import java.util.HashSet;
 import java.util.Set;
 
-import com.autonavi.tmap.cloud.common.datamodel.spatial.util.SpatialUtil;
+import com.lbi.tmap.cloud.common.datamodel.spatial.util.SpatialUtil;
 
 public class TestOnly {
 

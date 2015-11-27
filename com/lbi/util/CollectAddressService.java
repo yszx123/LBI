@@ -1,4 +1,4 @@
-﻿package com.autonavi.util;
+﻿package com.lbi.util;
 
 import java.io.BufferedReader;
 import java.io.File;

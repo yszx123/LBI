@@ -1,4 +1,4 @@
-package com.autonavi.util;
+package com.lbi.util;
 
 
 import java.io.*;
@@ -11,7 +11,7 @@ import java.util.Vector;
 		public static void utf() throws UnsupportedEncodingException, IOException {
 			
 			ReadFileName tmp=new ReadFileName();
-			Vector<String> vec=tmp.FileNameOftype("/home/ODPS3/autonavi/csvpath/synchronization", ".csv");
+			Vector<String> vec=tmp.FileNameOftype("/home/ODPS3/lbi/csvpath/synchronization", ".csv");
 			
 			for (int i=0;i<vec.size(); i++){
 				System.out.println(vec.get(i));

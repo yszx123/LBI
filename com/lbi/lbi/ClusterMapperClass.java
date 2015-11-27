@@ -1,4 +1,4 @@
-package com.autonavi.lbi;
+package com.lbi.lbi;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedReader;
@@ -11,10 +11,10 @@ import com.aliyun.odps.io.LongWritable;
 import com.aliyun.odps.io.Text;
 import com.aliyun.odps.mapreduce.MapContext;
 import com.aliyun.odps.mapreduce.Mapper;
-import com.autonavi.lbi.model.OptimConstants;
-import com.autonavi.map.LngLat;
-import com.autonavi.map.TMap;
-import com.autonavi.spatial.EsriAlgorithmsUtil;
+import com.lbi.lbi.model.OptimConstants;
+import com.lbi.map.LngLat;
+import com.lbi.map.TMap;
+import com.lbi.spatial.EsriAlgorithmsUtil;
 import com.esri.core.geometry.Point;
 
 /**
@@ -75,7 +75,7 @@ public class ClusterMapperClass extends Mapper<Text, Text> {
 																				// 时
 			String[] poi_desc = record.get("poi_desc").toString().split(" ");
 			// String nameIndex = util.queryPoint(new Point(lon,lat));
-			com.autonavi.map.Point pt = TMap.lonLat2Mercator(new LngLat(lon,lat));
+			com.lbi.map.Point pt = TMap.lonLat2Mercator(new LngLat(lon,lat));
 		    
 			if (name.indexOf("201") != -1 && poi_desc.length > 1 && lon >= -180
 					&& lon < 180 && lat >= -90 && lat < 90) {

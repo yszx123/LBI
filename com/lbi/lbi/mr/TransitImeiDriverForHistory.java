@@ -1,4 +1,4 @@
-package com.autonavi.lbi.mr;
+package com.lbi.lbi.mr;
 
 import com.aliyun.odps.io.TableInfo;
 import com.aliyun.odps.io.TableInputFormat;
@@ -6,16 +6,16 @@ import com.aliyun.odps.io.TableOutputFormat;
 import com.aliyun.odps.io.Text;
 import com.aliyun.odps.mapreduce.JobClient;
 import com.aliyun.odps.mapreduce.JobConf;
-import com.autonavi.lbi.TransitImeiMapper;
-import com.autonavi.lbi.TransitImeiReducer;
-import com.autonavi.util.TimeUtil;
+import com.lbi.lbi.TransitImeiMapper;
+import com.lbi.lbi.TransitImeiReducer;
+import com.lbi.util.TimeUtil;
 
 /**
  * 根据定位日志的imei和公交线路、公交站点的1.5km半径缓冲区分析得到用户与公交关系表
- * input table s_autonavi_address_location_log_utf_8 transit_gidindex 
+ * input table s_lbi_address_location_log_utf_8 transit_gidindex 
  * output table imei_gidindex
  * run:
- * jar -libjars json.jar,esri-geometry-api.jar,odps_cluster_qj.jar,autonavi-map-1.0.jar,esri_tool.jar,jts-1.13.jar,spatial-sdk-hadoop.jar -classpath autonavi/odps_cluster_qj.jar com.autonavi.lbi.mr.TransitImeiDriver s_autonavi_address_location_log_utf_8  transit_gidindex imei_gidindex 20131101 20131101;
+ * jar -libjars json.jar,esri-geometry-api.jar,odps_cluster_qj.jar,lbi-map-1.0.jar,esri_tool.jar,jts-1.13.jar,spatial-sdk-hadoop.jar -classpath lbi/odps_cluster_qj.jar com.lbi.lbi.mr.TransitImeiDriver s_lbi_address_location_log_utf_8  transit_gidindex imei_gidindex 20131101 20131101;
  * @author shuaimin.yang 
  */
 public class TransitImeiDriverForHistory {

@@ -1,4 +1,4 @@
-package com.autonavi.log;
+package com.lbi.log;
 
 import com.aliyun.odps.io.TableInfo;
 import com.aliyun.odps.io.TableInputFormat;
@@ -9,10 +9,10 @@ import com.aliyun.odps.mapreduce.JobConf;
 
 /**
  * 定位日志精简表提取程序
- * input table s_autonavi_location_log_gidindex transit_gidindex inputds outputds
- * output table s_autonavi_location_log_transit [cluster_id line_ids transit_ids] 
+ * input table s_lbi_location_log_gidindex transit_gidindex inputds outputds
+ * output table s_lbi_location_log_transit [cluster_id line_ids transit_ids] 
  * run:
- * jar -libjars json.jar,esri-geometry-api.jar,odps_cluster_qj.jar,autonavi-map-1.0.jar,esri_tool.jar,jts-1.13.jar,spatial-sdk-hadoop.jar -classpath autonavi/odps_cluster_qj.jar com.autonavi.lbi.mr.LocationTransitDriver s_autonavi_location_log_gidindex  transit_gidindex s_autonavi_location_log_transit 20131101 20131101;
+ * jar -libjars json.jar,esri-geometry-api.jar,odps_cluster_qj.jar,lbi-map-1.0.jar,esri_tool.jar,jts-1.13.jar,spatial-sdk-hadoop.jar -classpath lbi/odps_cluster_qj.jar com.lbi.lbi.mr.LocationTransitDriver s_lbi_location_log_gidindex  transit_gidindex s_lbi_location_log_transit 20131101 20131101;
  * @author shuaimin.yang
  * 
  */
@@ -30,7 +30,7 @@ public class ExtractFromDetailLog {
 
 		TableInputFormat.addInput(new TableInfo(args[0], "dt=" + args[2]), job); 
 		TableOutputFormat.addOutput(new TableInfo(args[1], "ds=" + args[2]),
-				job);// s_autonavi_location_log_transit
+				job);// s_lbi_location_log_transit
 		JobClient.runJob(job);
 	}
 }

@@ -1,4 +1,4 @@
-package com.autonavi.odps.udf;
+package com.lbi.odps.udf;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedReader;
@@ -8,7 +8,7 @@ import java.util.HashSet;
 
 import com.aliyun.odps.cache.DistributedCache;
 import com.aliyun.odps.udf.UDF;
-import com.autonavi.aps.util.GpsOffset;
+import com.lbi.aps.util.GpsOffset;
 
 public class LicenseOffset extends UDF {
 	

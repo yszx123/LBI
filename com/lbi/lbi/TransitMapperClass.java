@@ -1,4 +1,4 @@
-package com.autonavi.lbi;
+package com.lbi.lbi;
 
 import java.io.IOException;
 import java.util.Iterator;
@@ -9,8 +9,8 @@ import com.aliyun.odps.io.LongWritable;
 import com.aliyun.odps.io.Text;
 import com.aliyun.odps.mapreduce.MapContext;
 import com.aliyun.odps.mapreduce.Mapper;
-import com.autonavi.spatial.EsriAlgorithmsUtil;
-import com.autonavi.spatial.GeomAlgorithmUtil;
+import com.lbi.spatial.EsriAlgorithmsUtil;
+import com.lbi.spatial.GeomAlgorithmUtil;
 import com.esri.core.geometry.Geometry;
 import com.esri.core.geometry.Operator;
 import com.esri.core.geometry.OperatorBuffer;

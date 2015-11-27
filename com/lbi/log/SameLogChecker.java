@@ -1,4 +1,4 @@
-package com.autonavi.log;
+package com.lbi.log;
 
 import com.aliyun.odps.io.TableInfo;
 import com.aliyun.odps.io.TableInputFormat;
@@ -23,7 +23,7 @@ public class SameLogChecker {
 
 		TableInputFormat.addInput(new TableInfo(args[0], "ds=" + args[3]), job); 
 		TableInputFormat.addInput(new TableInfo(args[1], "ds=" + args[3]), job); 
-		TableOutputFormat.addOutput(new TableInfo(args[2]),job);// s_autonavi_location_log_transit
+		TableOutputFormat.addOutput(new TableInfo(args[2]),job);// s_lbi_location_log_transit
 		JobClient.runJob(job);
 	}
 }

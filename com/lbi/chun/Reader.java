@@ -1,4 +1,4 @@
-package com.autonavi.chun;
+package com.lbi.chun;
 
 import java.io.BufferedReader;
 import java.io.File;

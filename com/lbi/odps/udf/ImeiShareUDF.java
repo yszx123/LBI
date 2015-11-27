@@ -1,4 +1,4 @@
-package com.autonavi.odps.udf;
+package com.lbi.odps.udf;
 
 import java.util.ArrayList;
 import java.util.HashMap;

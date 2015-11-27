@@ -1,4 +1,4 @@
-package com.autonavi.lbi;
+package com.lbi.lbi;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -14,13 +14,13 @@ import com.aliyun.odps.io.LongWritable;
 import com.aliyun.odps.io.Text;
 import com.aliyun.odps.mapreduce.ReduceContext;
 import com.aliyun.odps.mapreduce.Reducer;
-import com.autonavi.lbi.model.OptimConstants;
-import com.autonavi.tmap.cloud.common.datamodel.spatial.Point;
-import com.autonavi.tmap.cloud.common.datamodel.spatial.cluster.m.ClusterModel;
-import com.autonavi.tmap.cloud.common.datamodel.spatial.cluster.m.Gid;
-import com.autonavi.tmap.cloud.common.datamodel.spatial.util.Kernel;
-import com.autonavi.tmap.cloud.common.datamodel.spatial.util.SpatialUtil;
-import com.autonavi.tmap.cloud.process.geographicstatistic.ClusterCreator;
+import com.lbi.lbi.model.OptimConstants;
+import com.lbi.tmap.cloud.common.datamodel.spatial.Point;
+import com.lbi.tmap.cloud.common.datamodel.spatial.cluster.m.ClusterModel;
+import com.lbi.tmap.cloud.common.datamodel.spatial.cluster.m.Gid;
+import com.lbi.tmap.cloud.common.datamodel.spatial.util.Kernel;
+import com.lbi.tmap.cloud.common.datamodel.spatial.util.SpatialUtil;
+import com.lbi.tmap.cloud.process.geographicstatistic.ClusterCreator;
 //import org.apache.hadoop.io.NullWritable;
 //import org.apache.hadoop.mapreduce.Reducer.Context;
 

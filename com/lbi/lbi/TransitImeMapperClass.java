@@ -1,4 +1,4 @@
-package com.autonavi.lbi;
+package com.lbi.lbi;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedReader;
@@ -12,8 +12,8 @@ import com.aliyun.odps.io.LongWritable;
 import com.aliyun.odps.io.Text;
 import com.aliyun.odps.mapreduce.MapContext;
 import com.aliyun.odps.mapreduce.Mapper;
-import com.autonavi.map.LngLat;
-import com.autonavi.map.TMap;
+import com.lbi.map.LngLat;
+import com.lbi.map.TMap;
 
 /**
  * 将record 经纬度点分配到合理的聚类区间 Record(x,y,...)
@@ -48,7 +48,7 @@ public class TransitImeMapperClass extends Mapper<Text, Text> {
 			String day = accesstime.substring(0, 10).replaceAll("-", "");
 			String imei = record.get("imei").toString();
 			if (day.equalsIgnoreCase(keyDate) && imei.indexOf(keySeperator)==-1) {
-				com.autonavi.map.Point pt = TMap.lonLat2Mercator(new LngLat(
+				com.lbi.map.Point pt = TMap.lonLat2Mercator(new LngLat(
 						lon, lat));
 				int gx = (int) Math.ceil(pt.X / GIDSIZE);
 				int gy = (int) Math.ceil(pt.Y / GIDSIZE);

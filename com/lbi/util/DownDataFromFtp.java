@@ -1,4 +1,4 @@
-package com.autonavi.util;
+package com.lbi.util;
 
 public class DownDataFromFtp {
 

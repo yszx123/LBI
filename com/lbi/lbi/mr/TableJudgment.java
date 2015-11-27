@@ -1,4 +1,4 @@
-package com.autonavi.lbi.mr;
+package com.lbi.lbi.mr;
 
 import com.aliyun.openservices.ClientConfiguration;
 import com.aliyun.openservices.odps.ODPSConnection;
@@ -12,7 +12,7 @@ public class TableJudgment {
 	protected static final String ODPS_ENDPOINT = "http://service.odps.aliyun-inc.com/api";//"http://42.121.102.18/api";//"http://dt.odps.aliyun.com";
 	private static final String ODPS_ACCESS_ID = "DFTvkXWruShVfqjx";// "2w1mbUbPwhgbqLnu";
 	private static final String ODPS_ACCESS_KEY = "zqeHhP3vyqTwczdVdzFulfMH6TZ9Nl";//"zpW6QAd30aDJYBuIeu1XrcCyoxllhE";
-	protected static String projectName = "autonavi_ods";
+	protected static String projectName = "lbi_ods";
 
 	public static boolean judgeDateCount(String date,String table, String prjName)
 	{

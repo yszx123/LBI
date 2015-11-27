@@ -1,4 +1,4 @@
-package com.autonavi.lbi.mr;
+package com.lbi.lbi.mr;
 
 import java.io.IOException;
 import java.util.HashSet;
@@ -19,12 +19,12 @@ import com.aliyun.odps.mapreduce.Mapper;
 import com.aliyun.odps.mapreduce.Partitioner;
 import com.aliyun.odps.mapreduce.ReduceContext;
 import com.aliyun.odps.mapreduce.Reducer;
-import com.autonavi.map.LngLat;
-import com.autonavi.map.Point;
-import com.autonavi.map.TMap;
-//import com.autonavi.util.MortanGid;
+import com.lbi.map.LngLat;
+import com.lbi.map.Point;
+import com.lbi.map.TMap;
+//import com.lbi.util.MortanGid;
 
-//import com.autonavi.lbi.ClusterImeiCombiner;
+//import com.lbi.lbi.ClusterImeiCombiner;
 
 public class ClusterImeiSortDriver {
 
@@ -188,10 +188,10 @@ public class ClusterImeiSortDriver {
 		String inDate = args[3];
 		/*
 		 * boolean hasData =
-		 * TableJudgment.judgeDateCount(inDate,args[0],"autonavi_ods");
+		 * TableJudgment.judgeDateCount(inDate,args[0],"lbi_ods");
 		 * while(!hasData) { inDate = TimeUtil.getPreDayTimeStamp(inDate, 7);
 		 * hasData =
-		 * TableJudgment.judgeDateCount(inDate,args[0],"autonavi_ods");
+		 * TableJudgment.judgeDateCount(inDate,args[0],"lbi_ods");
 		 * System.out.println("业务日期数据无,取前一天试一下!"); }
 		 */
 		TableInputFormat.addInput(new TableInfo(args[0], "ds=" + args[3]), job); // location

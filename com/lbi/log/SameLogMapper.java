@@ -1,4 +1,4 @@
-package com.autonavi.log;
+package com.lbi.log;
 
 import java.io.IOException;
 import java.util.HashSet;
